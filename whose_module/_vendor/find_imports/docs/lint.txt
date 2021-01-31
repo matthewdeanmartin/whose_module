@@ -1,0 +1,9 @@
+************* Module i_a_distinction_alaska.main
+output\i_a_distinction_alaska\i_a_distinction_alaska\main.py:9: [C0103(invalid-name), find_imports] Argument name "toCheck" doesn't conform to snake_case naming style
+output\i_a_distinction_alaska\i_a_distinction_alaska\main.py:9: [W0621(redefined-outer-name), find_imports] Redefining name 'toCheck' from outer scope (line 42)
+output\i_a_distinction_alaska\i_a_distinction_alaska\main.py:16: [C0415(import-outside-toplevel), find_imports] Import outside toplevel (imp)
+output\i_a_distinction_alaska\i_a_distinction_alaska\main.py:18: [C0103(invalid-name), find_imports] Variable name "importedItems" doesn't conform to snake_case naming style
+output\i_a_distinction_alaska\i_a_distinction_alaska\main.py:19: [C0103(invalid-name), find_imports] Variable name "pyFile" doesn't conform to snake_case naming style
+
+-----------------------------------
+Your code has been rated at 7.73/10
