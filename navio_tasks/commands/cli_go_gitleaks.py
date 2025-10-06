@@ -3,6 +3,7 @@ Implemented in go.
 
 Hangs on my workstation.
 """
+
 import os
 import shlex
 import subprocess
@@ -27,8 +28,7 @@ def run_gitleaks() -> None:
     command = shlex.split(command_text)
     _ = subprocess.run(
         command,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
+        capture_output=True,
         env={
             **os.environ,
             "GOPATH": os.path.expandvars("$HOME/gocode"),

@@ -11,6 +11,7 @@ Strategies
 
 Is it worse is lint counting. Move to different module?
 """
+
 import functools
 import hashlib
 import os
@@ -230,7 +231,7 @@ def timed() -> F:
             start = time.time()
             result = func(*args, **kwargs)
             end = time.time()
-            inform("{} ran in {}s".format(func.__name__, round(end - start, 2)))
+            inform(f"{func.__name__} ran in {round(end - start, 2)}s")
             return result
 
         return cast(F, wrapper)
