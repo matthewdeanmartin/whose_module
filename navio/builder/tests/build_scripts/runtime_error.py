@@ -1,6 +1,7 @@
 """
 Build script with a runtime error.
 """
+
 from navio.builder import task
 
 

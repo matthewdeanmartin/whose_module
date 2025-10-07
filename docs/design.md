@@ -23,7 +23,7 @@ Medium
 - [Baby Names](https://github.com/mileswwatkins/ssa_baby_names/blob/master/ssa_baby_names.py)
 - Names? https://pypi.org/project/names-dataset/
 - Machine Learning datasets
-    - ??? 
+    - ???
 
 The datasize is a bit too large for a pip installable library, but small
 enough that caching the whole thing might be a good idea. Or it changes

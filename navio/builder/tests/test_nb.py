@@ -185,7 +185,7 @@ class TestOptions:
                     r"{}\s+{}\s+{}".format(task.name, r"\[Ignored\]", task.doc), stdout
                 )
             else:
-                assert re.findall(fr"{task.name}\s+{task.doc}", stdout)
+                assert re.findall(rf"{task.name}\s+{task.doc}", stdout)
 
 
 class TestRuntimeError:

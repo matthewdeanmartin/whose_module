@@ -47,7 +47,7 @@ def echo(*args, **kwargs):
         args_str.append(",".join(args))
     if kwargs:
         args_str.append(
-            ",".join("{}={}".format(kw, kwargs[kw]) for kw in sorted(kwargs))
+            ",".join(f"{kw}={kwargs[kw]}" for kw in sorted(kwargs))
         )
 
     tasks_run.append("echo[%s]" % ",".join(args_str))

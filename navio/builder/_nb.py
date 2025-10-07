@@ -164,7 +164,7 @@ def _parse_args(args_str):
 
     for i, part in enumerate(arg_parts):
         if "=" in part:
-            key, value = [_str.strip() for _str in part.split("=")]
+            key, value = (_str.strip() for _str in part.split("="))
             if key in kwargs:
                 raise Exception("duplicate keyword argument %s" % part)
             kwargs[key] = value
@@ -209,7 +209,7 @@ def _run(
 
         else:
 
-            logger.info('Starting task "{}{}"'.format(task.name, str(args or [])))
+            logger.info(f'Starting task "{task.name}{str(args or [])}"')
 
             try:
                 # Run task.
@@ -379,7 +379,7 @@ def json_serial(obj):
 
 
 def dump(obj):
-    print("DUMP: {}".format(json.dumps(obj, indent=1, default=json_serial)))
+    print(f"DUMP: {json.dumps(obj, indent=1, default=json_serial)}")
 
 
 def dumps(obj):
@@ -410,7 +410,7 @@ def zipdir(zip_file, *paths):
             for root, dirs, files in os.walk(path):
                 for file in files:
                     zipf.write(os.path.join(root, file))
-                    print("Adding file: {}".format(os.path.join(root, file)))
+                    print(f"Adding file: {os.path.join(root, file)}")
     zipf.close()
 
 

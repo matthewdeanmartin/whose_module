@@ -1,6 +1,7 @@
 """
 Check if metadata stuff in setup.py is filled in sensibly
 """
+
 import os
 
 from navio_tasks.cli_commands import check_command_exists, execute

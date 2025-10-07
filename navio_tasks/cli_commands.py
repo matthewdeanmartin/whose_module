@@ -2,6 +2,7 @@
 Generic tools for handling shell commands, as opposed to commands that
 can be executed via `import tool`
 """
+
 import io
 import os
 import re
@@ -174,9 +175,7 @@ def execute_get_text(
         completed = subprocess.run(
             command,
             check=not ignore_error,
-            # shell=shell, # causes cross plat probs, security warnings, etc.
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
+            capture_output=True,
             env=env,
         )
     except subprocess.CalledProcessError:

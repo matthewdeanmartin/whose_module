@@ -1,6 +1,7 @@
 """
 Security tool, rarely finds problems, cna't be called from commandline
 """
+
 import os
 import sys
 
